@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Caption</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="Cipher.js"></script>
+</head>
+<style>
+    .standard-shadow {
+        box-shadow: 1px -2px 12px 0px rgba(220, 53, 69, 1);
+        -webkit-box-shadow: 1px -2px 12px 0px rgba(220, 53, 69, 1);
+        -moz-box-shadow: 1px -2px 12px 0px rgba(220, 53, 69, 1);
+    }
+</style>
+
+<body class="bg-dark">
+    <div class="container-fluid bg-black position-fixed top-0 standard-shadow" style="height:50px">
+        <p class="text-danger h3 p-2">Cipher Caption</p>
+    </div>
+    <div style="height: 60px;"></div>
+    <div class="container">
+        <p class="text-danger p-2">
+            Built with love for the things you cant say out loud on your instagram...
+        </p>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <p class="h4 text-danger m-3">Plain Caption</p>
+                <textarea class="form-control bg-dark text-danger standard-shadow border-0" id="cipher" name="cipher"
+                    rows="10" cols="50" onchange="encrypt()" onkeypress="this.onchange();" onpaste="this.onchange();"
+                    oninput="this.onchange();"></textarea>
+                <br />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <p class="h4 text-danger m-3">Cipher Caption</p>
+                <textarea class="form-control bg-dark text-danger standard-shadow border-0" id="decipher"
+                    name="decipher" rows="10" cols="50" onchange="decrypt()" onkeypress="this.onchange();"
+                    onpaste="this.onchange();" oninput="this.onchange();"></textarea>
+                <br />
+            </div>
+        </div>
+    </div>
+    <div style="height: 110px;"></div>
+    <div class="container-fluid bg-black position-fixed bottom-0 standard-shadow" style="height:75px">
+        <div class="container">
+            <div class="d-flex text-center justify-content-center">
+                <div class="m-2">
+                    <a href="https://www.instagram.com/__geek_god/">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#dc3545">
+                                    <path
+                                        d="M86,11.46667c-41.09653,0 -74.53333,33.4368 -74.53333,74.53333c0,41.09653 33.4368,74.53333 74.53333,74.53333c41.09653,0 74.53333,-33.4368 74.53333,-74.53333c0,-41.09653 -33.4368,-74.53333 -74.53333,-74.53333zM66.88516,34.4h38.21849c17.91667,0 32.49636,14.57422 32.49636,32.48516v38.21849c0,17.91667 -14.57423,32.49636 -32.48516,32.49636h-38.21849c-17.91667,0 -32.49636,-14.57423 -32.49636,-32.48516v-38.21849c0,-17.91667 14.57422,-32.49636 32.48516,-32.49636zM66.88516,45.86667c-11.58707,0 -21.01849,9.43689 -21.01849,21.02969v38.21849c0,11.58707 9.43689,21.01849 21.02969,21.01849h38.21849c11.58707,0 21.01849,-9.43689 21.01849,-21.02969v-38.21849c0,-11.58707 -9.43689,-21.01849 -21.02969,-21.01849zM112.76302,55.41849c2.10987,0 3.81849,1.70862 3.81849,3.81849c0,2.10987 -1.70862,3.82969 -3.81849,3.82969c-2.10987,0 -3.82969,-1.71982 -3.82969,-3.82969c0,-2.10987 1.71982,-3.81849 3.82969,-3.81849zM86,57.33333c15.8068,0 28.66667,12.85987 28.66667,28.66667c0,15.8068 -12.85987,28.66667 -28.66667,28.66667c-15.8068,0 -28.66667,-12.85987 -28.66667,-28.66667c0,-15.8068 12.85987,-28.66667 28.66667,-28.66667zM86,68.8c-9.4993,0 -17.2,7.7007 -17.2,17.2c0,9.4993 7.7007,17.2 17.2,17.2c9.4993,0 17.2,-7.7007 17.2,-17.2c0,-9.4993 -7.7007,-17.2 -17.2,-17.2z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="m-2">
+                    <a href="https://github.com/aditya-dawadikar">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#dc3545">
+                                    <path
+                                        d="M86,16.125c-38.58981,0 -69.875,31.28519 -69.875,69.875c0,32.99444 22.876,60.63 53.62906,67.95613c-1.591,-0.37894 -3.16856,-0.80356 -4.71656,-1.28731v-16.00944c0,0 -2.62031,0.87344 -6.11406,0.87344c-9.77444,0 -13.83525,-8.72094 -14.84844,-13.10156c-0.61544,-2.66869 -2.22256,-5.19762 -3.94794,-6.74294c-2.06131,-1.83825 -3.02613,-1.84363 -3.03956,-2.4725c-0.02688,-1.31956 1.76837,-1.26581 2.62031,-1.26581c4.36719,0 7.67819,4.64669 9.21544,7.04931c3.80819,5.93131 7.89587,6.92569 10.00019,6.92569c2.62031,0 4.88319,-0.39238 6.44194,-1.14487c0.72025,-5.074 2.97775,-9.59437 6.65963,-12.83012c-16.38569,-3.27606 -27.95,-12.67425 -27.95,-27.95c0,-7.869 3.15781,-15.10106 8.41994,-20.941c-0.5375,-1.52381 -1.43244,-4.60637 -1.43244,-9.62931c0,-3.31906 0.23112,-7.39331 1.74687,-11.35469c0,0 9.96525,0.06988 19.36344,8.97088c4.33763,-1.26312 8.97894,-1.98337 13.82719,-1.98337c4.84825,0 9.48956,0.72025 13.82719,1.98337c9.39819,-8.901 19.36344,-8.97087 19.36344,-8.97087c1.52381,3.96138 1.74688,8.03563 1.74688,11.35469c0,5.41531 -0.72025,8.57313 -1.161,9.93569c5.10088,5.78619 8.1485,12.90537 8.1485,20.63463c0,15.27575 -11.56431,24.67394 -27.95,27.95c4.37525,3.84312 6.9875,9.44119 6.9875,15.72187v22.99694c-1.548,0.48644 -3.12287,0.90838 -4.71656,1.28731c30.75306,-7.32613 53.62906,-34.96169 53.62906,-67.95613c0,-38.58981 -31.28519,-69.875 -69.875,-69.875zM90.87244,155.68687c-1.60981,0.11288 -3.23306,0.18813 -4.87244,0.18813c1.63938,0 3.25994,-0.07794 4.87244,-0.18813zM101.54988,154.11737c-3.12825,0.71219 -6.33444,1.21206 -9.60781,1.48888c3.27338,-0.27681 6.47956,-0.77937 9.60781,-1.48888zM86,155.875c-1.63938,0 -3.26262,-0.07525 -4.87244,-0.18813c1.6125,0.11019 3.23306,0.18813 4.87244,0.18813zM80.05525,155.60625c-3.27069,-0.27681 -6.47956,-0.77669 -9.60513,-1.48888c3.12825,0.7095 6.33444,1.21206 9.60513,1.48888z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
